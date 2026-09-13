@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Search } from '@lucide/vue'
+</script>
 
 <template>
 	<header class="header">
@@ -51,6 +53,13 @@
 					placeholder="Films, Serials, Actors"
 					class="search__input"
 				/>
+				<button class="search__button group">
+					<Search
+						:size="20"
+						opacity="0.6"
+						class="group-hover:opacity-100 transition-opacity duration-150"
+					/>
+				</button>
 			</form>
 		</div>
 	</header>
@@ -61,7 +70,7 @@
 	height: 72px;
 	display: flex;
 	align-items: center;
-	background-color: #1d1d16;
+	background-color: #141414;
 	color: #ffffff;
 
 	& .logo {
@@ -89,6 +98,8 @@
 	}
 
 	& .search {
+		display: flex;
+		align-items: center;
 		background-color: #ffffff26;
 		border-radius: 8px;
 
@@ -98,6 +109,12 @@
 			&:focus {
 				outline: none;
 			}
+		}
+
+		&__button {
+			height: 100%;
+			padding: 0 16px;
+			border-radius: 0 8px 8px 0;
 		}
 	}
 }

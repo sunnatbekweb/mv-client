@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from './components/layout/Header.vue'
+</script>
 
 <template>
-	<h1>MV-Client</h1>
+	<Header />
 </template>
